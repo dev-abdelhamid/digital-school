@@ -1,0 +1,609 @@
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 1300px) {
+    .path-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .path-title {
+        font-size: 1.2rem;
+    }
+     .path-description {
+        font-size: 1rem;
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .course-title, .course-description {
+        font-size: 0.9rem;
+    }
+    .course-detail-count, .course-detail-duration , .course-detail-level {
+       scale: .9;
+    }
+   
+
+
+    .how-to-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .how-to-title, .how-to-description {
+        font-size: 0.9rem;
+    }
+    .how-to-detail-count, .how-to-detail-duration , .how-to-detail-level {
+       scale: .9;
+    }
+}
+
+
+
+
+@media (max-width: 1030px) { 
+    
+.arrow { 
+    display: none;
+}
+    
+}
+
+
+@media (max-width: 930px) {
+
+    .path-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr); ;
+    }
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr); ;
+    }
+
+    .course-title, .course-description{
+        font-size: 0.7rem;
+    }
+    .course-detail-count, .course-detail-duration , .course-detail-level {
+        scale: .8;
+    }
+
+
+    .path-title {
+        font-size: 1.1rem;
+    }
+     .path-description {
+        font-size: .9rem;
+    }
+   
+    .path-detail-count, .path-detail-courses , .path-detail-level {
+        scale: .9;
+    }
+
+    .how-to-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr); ;
+    }
+
+    .how-to-title, .how-to-description{
+        font-size: 0.7rem;
+    }
+    .how-to-detail-count, .how-to-detail-duration , .how-to-detail-level {
+        scale: .8;
+    }
+
+
+}
+
+
+
+
+
+
+
+@media (max-width: 810px) {
+
+
+
+    
+    /* تصميم الهيدر */
+   .navbar {
+        font-size: 14px;
+        padding: 13px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--primary-color);
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar .logo {
+        font-size: 20px;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .menu-container {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+
+    /* أيقونة القائمة */
+    .navbar .menu-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 25px;
+        height: 20px;
+        cursor: pointer;
+        z-index: 20;
+        align-items: flex-end;
+        
+    }
+
+    .navbar .menu-icon .bar {
+        background-color: #fff;
+        height: 3px;
+        width: 100%;
+        border-radius: 2px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* تحويل أيقونة القائمة عند الفتح */
+    .navbar.open .menu-icon .bar:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    
+    }
+
+    .navbar.open .menu-icon .bar:nth-child(2) {
+        opacity: 0;
+        width: 100%;
+    }
+
+    .navbar.open .menu-icon .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -6px);
+        
+    }
+
+
+
+
+    /* القائمة المنسدلة */
+    .navbar .menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;        
+        position: absolute;
+        top: 100%; /* تجعل القائمة تحت الهيدر مباشرة */
+        left: 0;
+        width: 100%;
+        background-color: rgba(24, 21, 21, 0.822); /* خلفية داكنة مع شفاف */
+        backdrop-filter: blur(12px); /* تأثير التمويه */
+        padding: 20px; /* تقليل الحشو لتحسين التباعد */
+        transition: opacity 0.3s ease;
+        z-index: 9;
+    }
+
+    /* إظهار القائمة عند الفتح */
+    .navbar.open .menu {
+        display: flex;
+        
+    }
+
+    .navbar .menu a {
+        font-family: 'Noto Kufi Arabic', sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        display: flex;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .navbar .menu a:hover {
+        background-color: rgba(72, 0, 206, 0.404);
+        color: #fff;
+    }
+
+    /* العنصر الأول يحتوي على القائمة الفرعية */
+    .navbar .menu .dropdown {
+        position: relative;
+        width: 100%;
+        
+    }
+
+    .navbar .menu .dropdown > a {
+        cursor: pointer;
+        position: relative;
+        margin-top: 5px;
+        width: 100%;
+        gap: 8px;
+        
+    }
+
+    /* القائمة الفرعية */
+    .navbar .menu .dropdown-content {
+        display: none;
+        flex-wrap: wrap;
+        flex-direction: column;
+        background-color: rgba(240, 215, 230, 0.448);
+        position: inherit; 
+
+        width: 90%;
+        top: 0;
+        right: 10%; /* تظهر إلى اليمين من العنصر الأب */
+        z-index: 155; /* تأكيد ظهورها فوق العناصر الأخرى */
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    /* إظهار القائمة الفرعية عند النقر */
+    .navbar .menu .dropdown.open .dropdown-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        opacity: 1;
+        position: inherit;
+        transform: translateX(0); /* لإزالة أي حركة سابقة */
+    }
+
+    /* تأثيرات عند التمرير على الروابط الفرعية */
+    .navbar .menu .dropdown-content a {
+        font-size: 12px;
+        color: #ffffff;
+        transition: background-color 0.3s ease;
+        display: flex;
+    }
+
+    .navbar .menu .dropdown-content a:hover {
+        background-color: rgba(41, 27, 65, 0.2);
+    }
+
+    /* الأزرار الخاصة بتسجيل الدخول وإنشاء حساب */
+    .auth-buttons {
+        display: flex;
+        gap: 10px;
+        margin-left: 3px;
+    }
+    .btn-signup {
+      display: none;
+    }
+
+    .auth-buttons button {
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        font-size: 10px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+
+
+/* end header section */
+
+
+.features-grid {
+    grid-template-columns: repeat( 2,1fr);
+}
+
+
+#certificates-feature {
+    display: none;
+}
+
+
+.background-icons {
+     
+    top: 45px;
+  
+}
+
+
+/* خلفية النجوم */
+
+
+
+
+.star {
+scale: .7;
+}
+
+
+
+.icon {
+
+width: 25px;
+height: 30px;
+
+}
+
+
+
+
+
+.icon.with-text img {
+width: 25px;
+height: 25px;
+}
+
+
+.icon.with-text {
+scale: .8;
+font-size: 12px;
+gap: 3px;
+padding: 5px;
+
+}
+
+
+
+/* توزيع المسارات */
+#data-analytics-icon { display: none ; top: 17%; right: 69%; font-weight: bold; width: 120px;}
+#web-dev-icon { display: none; top: 19%; left: 65%; font-weight: bold; }
+#ai-icon {display: none; bottom: 15%; right: 75%; ;  font-weight: bold; width: 200PX; }
+#cybersecurity-icon { display: none; width: 190px;; bottom: 14%; left: 75%; font-weight: bold; }
+
+#pgsql  { display: none;}
+#ruby-icon { display: none; }
+#angular-icon { display: none; }
+#php-icon { display: none;}
+#react-icon { display: none; }
+#kotlin-icon { display: none; }
+#scale {display: none;}
+
+
+
+
+/* توزيع الأيقونات */
+#figma-icon { scale : .9; top: 14%; right: 4%; }
+#css-icon { top: 10%; left: 79%; scale: .8; }
+#js-icon { top: 20%; left: 82%; scale: .8; }
+#cpp-icon {scale: 1; top: 19%; left: 56%; }
+#git { top: 14%; left: 68%; scale: .9; }
+#sass-icon { scale : 1.4; top: 29%; right: 3%; }
+
+
+
+#swift-icon {  top: 14%; left: 2%; }
+#html-icon {  top: 10%; right: 78%; scale:.8; }
+#sql-icon { top: 20%; right: 82%; }
+#matalab {top: 14%; right: 68%;  }
+#csharp-icon {
+top: 29%;
+left: 0%;
+scale: 1.1;
+}
+
+#laravel { scale: .9;  top: 19%; right: 56%;  }
+
+#node-js {top: 12%; right: 48%; scale: 2; filter: brightness(1.5); }
+
+#linux {
+bottom: 0%;
+right: 4%;
+}
+
+#debian {
+bottom: 0%;
+right: 28%;
+scale: .9;
+}
+#ubuntu {
+bottom: 8%;
+right: 15%;
+scale: .9;
+}
+
+#arch {
+bottom: -6%;
+right: 19%;
+scale: .8;
+}
+#perl {
+bottom: 8%;
+right: 84%;
+scale: 1.1;
+}
+#maven {
+bottom: -1%;
+right: 70%;
+scale: 1.2;
+}
+
+#python-icon {
+bottom: 8%;
+right: 40%;
+scale: 1.3;
+}
+
+#red-hat {
+bottom: -5%;
+right: 49%;
+scale: 2.5;
+}
+
+
+#julia-icon {
+top: 82%;
+left: 92%;
+}
+
+#docker {
+bottom: 0%;
+right: 92%;
+scale: .8;
+}
+
+#stack {
+bottom: -6%;
+right: 81%;
+scale: .7;
+}
+#raml {
+bottom: 14%;
+right: 95%;
+}
+
+
+#api {
+bottom: 7.6%;
+right: 61%;
+scale: 1.7;
+}
+
+
+
+
+
+
+
+
+
+.arrow { 
+    display: none;
+}
+
+
+
+.steps-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.step {
+    width: 100%;
+    max-width: none; /* إلغاء الحد الأقصى في الشاشات الصغيرة */
+}
+
+
+
+
+.hero {
+    padding: 0rem 2rem;
+    height: 100vh;
+    display: flex;
+}
+
+
+.hero-title {
+    font-size: 2rem;
+}
+
+.hero-description {
+    font-size: .9rem;
+}
+
+.search-filter-container {
+    scale: .9;
+}
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 650px) {
+
+
+
+    .testimonial-slider {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        align-items: stretch;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat( 1,1fr);
+    }
+    .course-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .course-title, .course-description {
+        font-size: 0.7rem;
+    }
+    .course-detail-count,.course-detail-duration, .course-detail-level  {
+        scale: .8;
+    }
+
+
+    .path-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .path-title, .path-description {
+        font-size: 0.7rem;
+    }
+    .path-detail-count, .path-detail-courses , .path-detail-level {
+        scale: .8;
+    }
+
+
+    .how-to-grid {
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+
+    .how-to-title, .how-to-description {
+        font-size: 0.7rem;
+    }
+    .how-to-detail-count,.how-to-detail-duration, .how-to-detail-level  {
+        scale: .8;
+    }
+
+    
+
+}
+
+
+
+
+
+
+@media (max-width: 375px) {
+    .hero-title {
+     font-size: 1.5rem;
+    }
+
+    .hero-description {
+        font-size: 0.7rem;
+    }
+
+
+    
+}
+
+
+
+
+
+
+

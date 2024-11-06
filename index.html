@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المدرسة الرقمية المفتوحة - تعلم التكنولوجيا بطريقة مبتكرة</title>
+    <meta name="description"
+        content="المدرسة الرقمية المفتوحة توفر تجربة تعليمية مبتكرة في مجال التكنولوجيا مع دورات تفاعلية وخبراء متخصصين. انضم إلينا اليوم!">
+    <meta name="keywords" content="تعليم رقمي، دورات تكنولوجيا، ابتكار، تعلم تفاعلي">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" async>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/Normalize.css">
+
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+
+            <div class="message-bar">
+                <p class="discount-message">احصل على خصم 20% عند التسجيل الآن! <span
+                        class="close-message">&times;</span>
+                </p>
+            </div>
+            <div class="navbar">
+                <!-- Logo -->
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <a href="#">المدرسة الرقمية</a>
+                </div>
+
+
+                <!-- Navigation Menu -->
+                <nav class="menu">
+                    <div class="dropdown">
+                        <a href="#educational-content" class="dropbtn">المحتوى التعليمي <i
+                                class="fas fa-caret-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="tracks.html">المسارات التكنولوجية</a>
+                            <a href="#courses">الدورات</a>
+                            <a href="#how-to">الكيفيات</a>
+                        </div>
+                    </div>
+                    <a href="#">عن المنصة ؟</a>
+                    <a href="#">المجتمع</a>
+
+                    <!-- Theme Toggle Button -->
+                    <button title="mode"
+                        class="theme-toggle-btn flex items-center justify-center rounded-lg bg-slate-500/5 p-3 text-lg text-indigo-600 transition-all duration-300 hover:bg-indigo-600 hover:text-white dark:text-amber-500 dark:hover:bg-amber-600 dark:hover:text-white">
+                        <!-- Sun Icon -->
+                        <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                        <!-- Moon Icon -->
+                        <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
+                </nav>
+                <div class="menu-container">
+                    <!-- Authentication Buttons -->
+                    <div class="auth-buttons">
+                        <button class="btn-signup">حساب جديد</button>
+                        <button class="btn-login">تسجيل الدخول</button>
+                    </div>
+
+
+                    <!-- Menu Icon for Mobile -->
+                    <span class="menu-icon" id="menu-icon">
+                        <span class="bar"></span>
+                        <span class="bar middle"></span>
+                        <span class="bar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <!-- Main Content -->
+    <main>
+        <div class="background">
+            <svg class="stars" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <!-- تعريف التدرجات -->
+                    <linearGradient id="star-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:white;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:lightgray;stop-opacity:1" />
+                    </linearGradient>
+                    <linearGradient id="turquoise-star-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#00FFFF;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#008080;stop-opacity:1" />
+                    </linearGradient>
+                    <linearGradient id="yellow-star-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:yellow;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:orange;stop-opacity:1" />
+                    </linearGradient>
+                    <linearGradient id="red-star-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <path id="star-shape"
+                            d="M12.554.492c.49 3.288 1.307 7.363 2.448 8.505 1.142 1.142 5.22 1.959 8.51 2.449.651.097.65 1.01 0 1.107-3.29.49-7.367 1.307-8.51 2.448-1.143 1.143-1.96 5.227-2.45 8.518-.096.642-1.009.641-1.104 0-.49-3.291-1.308-7.374-2.45-8.517-1.142-1.143-5.217-1.959-8.506-2.45a.558.558 0 0 1 0-1.107c3.289-.49 7.363-1.307 8.505-2.448 1.142-1.142 1.959-5.216 2.45-8.505a.558.558 0 0 1 1.107 0Z" />
+
+                    </linearGradient>
+                    <!-- تأثير التوهج -->
+                    <filter id="glow">
+                        <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+                        <feMerge>
+                            <feMergeNode in="coloredBlur" />
+                            <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                    </filter>
+                </defs>
+
+                <!-- النجوم البيضاء -->
+                <circle class="star fixed" cx="20%" cy="30%" r="2" fill="url(#star-gradient)" />
+                <circle class="star fixed" cx="89%" cy="39%" r="2" fill="url(#star-gradient)" />
+                <circle class="star fixed" cx="70%" cy="20%" r="2" fill="url(#star-gradient)" />
+                <circle class="star fixed" cx="95%" cy="49%" r="3" fill="url(#star-gradient)" />
+                <circle class="star moving" cx="40%" cy="50%" r="1.5" fill="url(#star-gradient)" />
+                <circle class="star moving" cx="15%" cy="20%" r="1.5" fill="url(#star-gradient)" />
+                <circle class="star fixed" cx="60%" cy="20%" r="2.5" fill="url(#star-gradient)" />
+                <circle class="star moving" cx="80%" cy="70%" r="1" fill="url(#star-gradient)" />
+                <circle class="star fixed" cx="50%" cy="80%" r="2" fill="url(#star-gradient)" />
+                <circle class="star moving" cx="70%" cy="40%" r="1.5" fill="url(#star-gradient)" />
+                <circle class="star fixed" cx="30%" cy="60%" r="2.5" fill="url(#star-gradient)" />
+                <circle class="star moving" cx="90%" cy="30%" r="1" fill="url(#star-gradient)" />
+                <circle class="star fixed" cx="10%" cy="80%" r="2" fill="url(#star-gradient)" />
+                <circle class="star moving" cx="25%" cy="25%" r="1.5" fill="url(#star-gradient)" />
+                <circle class="star fixed" cx="75%" cy="75%" r="2.5" fill="url(#star-gradient)" />
+                <circle class="star moving" cx="85%" cy="15%" r="1" fill="url(#star-gradient)" />
+                <circle class="star fixed" cx="95%" cy="95%" r="2.5" fill="url(#star-gradient)" />
+                <circle class="star fixed" cx="45%" cy="25%" r="1.5" fill="url(#star-gradient)" />
+                <circle class="star fixed" cx="15%" cy="55%" r="2" fill="url(#star-gradient)" />
+                <circle class="star moving" cx="35%" cy="35%" r="1.5" fill="url(#star-gradient)" />
+                <circle class="star fixed" cx="55%" cy="65%" r="2.5" fill="url(#star-gradient)" />
+                <circle class="star moving" cx="65%" cy="45%" r="1" fill="url(#star-gradient)" />
+                <circle class="star fixed" cx="45%" cy="85%" r="2" fill="url(#star-gradient)" />
+                <circle class="star moving" cx="5%" cy="5%" r="1.5" fill="url(#star-gradient)" />
+
+                <!-- النجوم التركوازية -->
+                <circle class="star moving" cx="15%" cy="20%" r="2" fill="url(#turquoise-star-gradient)" />
+                <circle class="star fixed" cx="35%" cy="40%" r="1.5" fill="url(#turquoise-star-gradient)" />
+                <circle class="star moving" cx="55%" cy="10%" r="2.5" fill="url(#turquoise-star-gradient)" />
+                <circle class="star moving" cx="55%" cy="30%" r="2.5" fill="url(#turquoise-star-gradient)" />
+                <circle class="star moving" cx="41%" cy="32%" r="1.5" fill="url(#turquoise-star-gradient)" />
+                <circle class="star fixed" cx="75%" cy="60%" r="1" fill="url(#turquoise-star-gradient)" />
+                <circle class="star moving" cx="45%" cy="70%" r="2" fill="url(#turquoise-star-gradient)" />
+
+                <!-- النجوم الصفراء -->
+                <circle class="star fixed" cx="10%" cy="25%" r="2" fill="url(#yellow-star-gradient)" />
+                <circle class="star moving" cx="30%" cy="45%" r="1.5" fill="url(#yellow-star-gradient)" />
+                <circle class="star fixed" cx="55%" cy="95%" r="2.5" fill="url(#yellow-star-gradient)" />
+                <circle class="star fixed" cx="90%" cy="55%" r="2.5" fill="url(#yellow-star-gradient)" />
+                <circle class="star fixed" cx="80%" cy="15%" r="2.5" fill="url(#yellow-star-gradient)" />
+                <circle class="star fixed" cx="95%" cy="15%" r="2.5" fill="url(#yellow-star-gradient)" />
+                <circle class="star fixed" cx="50%" cy="15%" r="2.5" fill="url(#yellow-star-gradient)" />
+                <circle class="star moving" cx="70%" cy="65%" r="1" fill="url(#yellow-star-gradient)" />
+                <circle class="star fixed" cx="40%" cy="75%" r="2" fill="url(#yellow-star-gradient)" />
+                <circle class="star moving" cx="60%" cy="35%" r="1.5" fill="url(#yellow-star-gradient)" />
+                <circle class="star fixed" cx="20%" cy="55%" r="2.5" fill="url(#yellow-star-gradient)" />
+                <circle class="star moving" cx="80%" cy="25%" r="1" fill="url(#yellow-star-gradient)" />
+                <circle class="star fixed" cx="0%" cy="75%" r="2" fill="url(#yellow-star-gradient)" />
+                <circle class="star moving" cx="15%" cy="35%" r="1.5" fill="url(#yellow-star-gradient)" />
+                <circle class="star fixed" cx="35%" cy="55%" r="2.5" fill="url(#yellow-star-gradient)" />
+                <circle class="star moving" cx="55%" cy="25%" r="1" fill="url(#yellow-star-gradient)" />
+                <circle class="star fixed" cx="75%" cy="85%" r="2" fill="url(#yellow-star-gradient)" />
+
+            </svg>
+        </div>
+
+
+        <div class="background-icons">
+            <!-- أيقونات بدون نصوص -->
+
+
+
+
+            <div class="icon" id="angular-icon">
+                <img src="/assets/angular-svgrepo-com.svg" alt="Angular">
+            </div>
+            <div class="icon" id="css-icon">
+                <img src="assets/css-3-svgrepo-com.svg" alt="CSS3">
+            </div>
+            <div class="icon" id="js-icon">
+                <img src="/assets/4373213_js_logo_logos_icon.svg" alt="JavaScript">
+            </div>
+            <div class="icon" id="php-icon">
+                <img src="/assets/php2-svgrepo-com - Copy.svg" alt="PHP">
+            </div>
+            <div class="icon" id="cpp-icon">
+                <img src="assets/icons8-c++.svg" alt="C++">
+            </div>
+            <div class="icon" id="swift-icon">
+                <img src="/assets/icons8-swift.svg" alt="swift">
+            </div>
+            <div class="icon" id="csharp-icon">
+                <img src="/assets/c-sharp-svgrepo-com.svg" alt="c#">
+            </div>
+            <div class="icon" id="ruby-icon">
+                <img src="/assets/ruby-svgrepo-com (1).svg" alt="ruby">
+            </div>
+            <div class="icon" id="sass-icon">
+                <img src="/assets/sass-svgrepo-com.svg" alt="sass">
+            </div>
+            <div class="icon" id="python-icon">
+                <img src="/assets/icons8-python.svg" alt="Python">
+            </div>
+            <div class="icon" id="laravel">
+                <img src="/assets/laravel-svgrepo-com.svg" alt="laravel">
+            </div>
+            <div class="icon" id="react-icon">
+                <img src="/assets/atom-svgrepo-com (1).svg" alt="React">
+            </div>
+            <div class="icon" id="figma-icon">
+                <img src="/assets/figma-svgrepo-com.svg" alt="figma">
+            </div>
+            <div class="icon" id="html-icon">
+                <img src="/assets/html-5-svgrepo-com.svg" alt="HTML5">
+            </div>
+            <div class="icon" id="sql-icon">
+                <img src="/assets/sql-database-sql-azure-svgrepo-com.svg" alt="MySQL">
+            </div>
+            <div class="icon" id="julia-icon">
+                <img src="/assets/julia-svgrepo-com.svg" alt="julia">
+            </div>
+            <div class="icon" id="kotlin-icon">
+                <img src="/assets/kotlin-svgrepo-com.svg" alt="Kotlin">
+            </div>
+
+
+            <div class="icon" id="linux">
+                <img src="/assets/linux-svgrepo-com.svg" alt="linux">
+            </div>
+            <div class="icon" id="matalab">
+                <img src="/assets/matlab-svgrepo-com.svg" alt="matalab">
+            </div>
+
+            <div class="icon" id="maven">
+                <img src="/assets/maven-svgrepo-com.svg" alt="maven">
+            </div>
+
+            <div class="icon" id="mysql">
+                <img src="/assets/mysql-logo-svgrepo-com.svg" alt="mysql">
+            </div>
+
+            <div class="icon" id="pgsql">
+                <img src="/assets/pgsql-svgrepo-com.svg" alt="pgsql">
+            </div>
+
+            <div class="icon" id="api">
+                <img src="/assets/api-svgrepo-com.svg" alt="api">
+            </div>
+
+            <div class="icon" id="perl">
+                <img src="/assets/perl-svgrepo-com (1).svg" alt="perl">
+            </div>
+
+
+            <div class="icon" id="git">
+                <img src="/assets/git-svgrepo-com.svg" alt="git">
+            </div>
+
+
+            <div class="icon" id="scale">
+                <img src="/assets/scala-svgrepo-com.svg" alt="scale">
+            </div>
+
+            <div class="icon" id="stack">
+                <img src="/assets/stack-overflow-svgrepo-com.svg" alt="stack">
+            </div>
+
+            <div class="icon" id="ubuntu">
+                <img src="/assets/ubuntu-svgrepo-com.svg" alt="ubuntu">
+            </div>
+
+            <div class="icon" id="raml">
+                <img src="/assets/raml-svgrepo-com.svg" alt="raml">
+            </div>
+
+            <div class="icon" id="arch">
+                <img src="/assets/assembly-svgrepo-com.svg" alt="arch">
+            </div>
+
+            <div class="icon" id="debian">
+                <img src="/assets/debian-svgrepo-com.svg" alt="debian">
+            </div>
+
+            <div class="icon" id="docker">
+                <img src="/assets/docker-svgrepo-com.svg" alt="docker">
+            </div>
+
+            <div class="icon" id="node-js">
+                <img src="/assets/nodejs-logo-svgrepo-com.svg" alt="node-js">
+            </div>
+
+            <div class="icon" id="red-hat">
+                <img src="/assets/redhat-svgrepo-com.svg" alt="red-hat">
+            </div>
+
+            <!-- أيقونات مع نصوص -->
+            <div class="icon with-text" id="data-analytics-icon">
+                <img src="/assets/analytics-svgrepo-com (1).svg" alt="علوم البيانات">
+                <span>علوم البيانات</span>
+            </div>
+            <div class="icon with-text" id="cybersecurity-icon">
+                <img src="/assets/antivirus-cyberspace-firewall-information-password-privacy-shield-2-svgrepo-com.svg"
+                    alt="الأمن السيبراني">
+                <span>الأمن السيبراني</span>
+            </div>
+            <div class="icon with-text" id="ai-icon">
+                <img src="/assets/brain-svgrepo-com (1).svg" alt="الذكاء الاصطناعي">
+                <span>الذكاء الاصطناعي</span>
+            </div>
+            <div class="icon with-text" id="web-dev-icon">
+                <img src="/assets/coding-html-svgrepo-com.svg" alt="تطوير تطبيقات الويب">
+                <span>تطوير تطبيقات الويب </span>
+            </div>
+        </div>
+
+
+
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">انطلق نحو المستقبل مع المدرسة الرقمية</h1>
+                <p class="hero-description">انطلق في رحلة إبداعية لاكتشاف عالم التكنولوجيا من خلال برامجنا التعليمية
+                    المبتكرة ودوراتنا التفاعلية مع نخبة من الخبراء. حان الوقت لصقل مهاراتك وتشكيل مستقبلك الرقمي!</p>
+                <div class="search-filter-container">
+                    <div class="search-container">
+                        <input type="text" placeholder="ابحث عن دورة...">
+                        <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+                    </div>
+                    <button class="filter-button"><i class="fas fa-filter"></i></button>
+                </div>
+                <a href="#educational-content" class="learn-button">ابدأ التعلم الآن</a>
+            </div>
+        </section>
+
+
+
+
+        <section class="cta-section">
+            <img class="cta-img-top" src="/assets/footer-lines.svg" alt="تطوير تطبيقات الويب">
+            <div class="cta-container">
+                <h2>ابدأ رحلتك التعليمية اليوم</h2>
+                <p>انضم إلى الآلاف من المتعلمين وطور مهاراتك في مجال التكنولوجيا</p>
+                <a href="#" class="cta-button">ابدأ الآن</a>
+            </div>
+            <img class="cta-img-bottom" src="/assets/footer-lines.svg" alt="تطوير تطبيقات الويب">
+        </section>
+
+
+
+
+
+
+        <section class="our-steps" id="our-courses">
+            <div class="container">
+                <h3 class="main-title">طوّر مهاراتك بخطوات بسيطة</h3>
+                <p class="subtitle">استعد لمستقبل مهني ناجح في عالم التكنولوجيا مع خطوات مدروسة خصيصًا لتحقيق أهدافك
+                    بسرعة وفاعلية.</p>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="circle-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h5>اكتشف مجالك المفضل</h5>
+                        <p>ابدأ رحلتك بالبحث عن المجال الذي يثير شغفك في التكنولوجيا واختر المسار الذي يناسب أهدافك
+                            المهنية.</p>
+                    </div>
+                    <div class="arrow">
+                        <img src="https://mahara-tech.s3.eu-west-3.amazonaws.com/icons/first_line_icon.svg"
+                            class="arrow1" id="first-arrow" alt="Arrow">
+                    </div>
+                    <div class="step">
+                        <div class="circle-icon">
+                            <i class="fas fa-map-signs"></i>
+                        </div>
+                        <h5>حدد مسار التعلم</h5>
+                        <p>اختر مسار التعلم الذي يناسبك وتعلم المهارات المطلوبة بخطوات منهجية لتحقيق النجاح.</p>
+                    </div>
+                    <div class="arrow">
+                        <img src="https://mahara-tech.s3.eu-west-3.amazonaws.com/icons/first_line_icon.svg"
+                            class="arrow1" id="second-arrow" alt="Arrow">
+                    </div>
+                    <div class="step">
+                        <div class="circle-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h5>انخرط في المشاريع العملية</h5>
+                        <p>طبق ما تعلمته من خلال مشاريع حقيقية تتيح لك تجربة العالم الحقيقي وصقل مهاراتك العملية.</p>
+                    </div>
+                    <div class="arrow">
+                        <img src="https://mahara-tech.s3.eu-west-3.amazonaws.com/icons/first_line_icon.svg"
+                            class="arrow1" id="last-arrow" alt="Arrow">
+                    </div>
+                    <div class="step">
+                        <div class="circle-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h5>استعد لسوق العمل</h5>
+                        <p>تعرف على احتياجات سوق العمل الحر وابدأ في بناء بصمتك الخاصة لتتفوق في مسيرتك المهنية.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Educational Content Section -->
+        <section id="educational-content" class="educational-content container">
+            <h2 class="edu-section-title">المحتوى التعليمي</h2>
+            <p class="section-description">استكشف مجموعة متنوعة من المحتوى التعليمي الذي يغطي جميع جوانب التعليم
+                والتطوير الشخصي</p>
+
+            <div class="content-grid">
+                <div class="content-item">
+                    <i class="fas fa-brain"></i>
+                    <h3>موارد تعليمية</h3>
+                    <p>اكتشف أدوات وموارد متقدمة تساعدك في تحقيق التعلم الذكي وتطوير مهاراتك.</p>
+                </div>
+                <div class="content-item">
+                    <i class="fas fa-video"></i>
+                    <h3>محتوى تفاعلي</h3>
+                    <p>استمتع بفيديوهات، مقالات، وندوات عبر الإنترنت تجعل من التعلم تجربة مميزة.</p>
+                </div>
+                <div class="content-item">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>مشاريع عملية</h3>
+                    <p>قم بتطبيق المعرفة المكتسبة من خلال مشاريع حقيقية تعزز من مهاراتك العملية.</p>
+                </div>
+                <div class="content-item">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>اختبارات تقييمية</h3>
+                    <p>اجتاز اختبارات تفاعلية لمساعدتك في قياس تقدمك واكتساب المهارات بكفاءة.</p>
+                </div>
+            </div>
+
+            <p class="section-note">نحن ملتزمون بتحديث المحتوى بانتظام لضمان حصولك على أحدث المعلومات والمهارات المطلوبة
+                في سوق العمل.</p>
+
+
+            <section id="educational-content" class="educational-content-sec">
+                <div class="container">
+                    <h2 class="edu-title">محتوى متجدّد يواكب مهارات المستقبل</h2>
+
+                    <div class="edu-tabs">
+                        <button class="edu-tab active" data-tab="learning-paths" id="learning-paths-tab">المسارات
+                        </button>
+                        <button class="edu-tab" data-tab="courses" id="courses-tab">الدورات
+                        </button>
+                        <button class="edu-tab" data-tab="how-to" id="how-to-tab">الكيفيات
+                        </button>
+                    </div>
+                    <div class="tab-content active" id="learning-paths">
+                        <h3 class="content-title">مسارات تعليمية مبتكرة تقودك نحو النجاح</h3>
+                        <div class="path-grid">
+                            <!-- مسار 1: منهجيات وإطارات عمل المشاريع التقنية -->
+                            <div class="path-card">
+                                <div class="path-card-inner">
+                                    <div class="path-card-front">
+                                        <img class="path-img" src="/assets/pexels-thisisengineering-3861972.jpg"
+                                            alt="منهجيات وإطارات عمل المشاريع التقنية" loading="lazy">
+                                        <div class="pathpath">
+                                            <p> مسار </p>
+                                        </div>
+                                        <div class="path-info">
+                                            <h4 class="path-title">منهجيات وإطارات عمل المشاريع التقنية</h4>
+                                        </div>
+                                    </div>
+                                    <div class="path-card-back">
+                                        <div class="path-info-hover">
+                                            <h4 class="path-title">منهجيات وإطارات عمل المشاريع التقنية</h4>
+                                        </div>
+                                        <p class="path-description">تعلم إدارة المشاريع التقنية باستخدام المنهجيات
+                                            الحديثة مثل Agile وإطارات العمل كـ Scrum و Kanban و Lean. اكتسب المهارات
+                                            اللازمة لقيادة المشاريع التقنية بنجاح.</p>
+                                        <div class="path-details">
+                                            <span class="path-details-inner">
+                                                <span class="path-detail-count"><i class="fas fa-users"></i> +3200
+                                                </span>
+                                                <span class="path-detail-courses"><i class="fas fa-book"></i> 6
+                                                    دورات</span>
+                                                <span class="path-detail-level" data-level="intermediate">
+                                                    <span class="level-icon">
+                                                        <div class="bar-container">
+                                                            <div class="bar bar1"></div>
+                                                            <div class="bar bar2"></div>
+                                                            <div class="bar bar3"></div>
+                                                            <div class="bar bar4"></div>
+                                                        </div>
+                                                    </span>
+                                                    متوسط
+                                                </span>
+                                            </span>
+                                            <button class="path-detail-btn"><i class="fa-solid fa-chevron-left"></i></i>
+                                                ابدأ </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- مسار 2: تطوير واجهات الويب الأمامية -->
+                            <div class="path-card">
+                                <div class="path-card-inner">
+                                    <div class="path-card-front">
+                                        <img class="path-img" src="/assets/pexels-divinetechygirl-1181278.jpg"
+                                            alt="تطوير واجهات المستخدم" loading="lazy">
+                                        <div class="pathpath">
+                                            <p> مسار </p>
+                                        </div>
+                                        <div class="path-info">
+                                            <h4 class="path-title">تطوير واجهات الويب الأمامية</h4>
+                                        </div>
+                                    </div>
+                                    <div class="path-card-back">
+                                        <div class="path-info-hover">
+                                            <h4 class="path-title">تطوير واجهات الويب الأمامية</h4>
+                                        </div>
+                                        <p class="path-description">ابتكر تجارب مستخدم استثنائية مع أحدث تقنيات الويب.
+                                            من HTML5 إلى React، ستتقن فن صناعة واجهات سلسة وجذابة.</p>
+                                        <div class="path-details">
+                                            <span class="path-details-inner">
+                                                <span class="path-detail-count"><i class="fas fa-users"></i> +5670
+                                                </span>
+
+                                                <span class="path-detail-courses"><i class="fas fa-book"></i> 7
+                                                    دورات</span>
+                                                <span class="path-detail-level" data-level="beginner">
+                                                    <span class="level-icon">
+                                                        <div class="bar-container">
+                                                            <div class="bar bar1"></div>
+                                                            <div class="bar bar2"></div>
+                                                            <div class="bar bar3"></div>
+                                                            <div class="bar bar4"></div>
+                                                        </div>
+                                                    </span>
+                                                    مبتدئ
+                                                </span>
+                                            </span>
+                                            <button class="path-detail-btn"><i class="fa-solid fa-chevron-left"></i></i>
+                                                ابدأ </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- مسار 3: تطوير تطبيقات الهاتف المحمول -->
+                            <div class="path-card">
+                                <div class="path-card-inner">
+                                    <div class="path-card-front">
+                                        <img class="path-img" src="/assets/pexels-cottonbro-4709293.jpg"
+                                            alt="تطوير تطبيقات الهاتف المحمول" loading="lazy">
+                                        <div class="pathpath">
+                                            <p> مسار </p>
+                                        </div>
+                                        <div class="path-info">
+                                            <h4 class="path-title">تطوير تطبيقات الهاتف المحمول</h4>
+                                        </div>
+                                    </div>
+                                    <div class="path-card-back">
+                                        <div class="path-info-hover">
+                                            <h4 class="path-title">تطوير تطبيقات الهاتف flutter </h4>
+                                        </div>
+                                        <p class="path-description">تعلم كيفية إنشاء تطبيقات مبتكرة للهواتف الذكية. من
+                                            Android إلى iOS، ستكتسب المهارات اللازمة لتطوير تطبيقات عالية الأداء.</p>
+                                        <div class="path-details">
+                                            <span class="path-details-inner">
+                                                <span class="path-detail-count"><i class="fas fa-users"></i> +5670
+                                                </span>
+
+                                                <span class="path-detail-courses"><i class="fas fa-book"></i> 8
+                                                    دورات</span>
+
+                                                <span class="path-detail-level" data-level="intermediate">
+                                                    <span class="level-icon">
+                                                        <div class="bar-container">
+                                                            <div class="bar bar1"></div>
+                                                            <div class="bar bar2"></div>
+                                                            <div class="bar bar3"></div>
+                                                            <div class="bar bar4"></div>
+                                                        </div>
+                                                    </span>
+                                                    متوسط
+                                                </span>
+                                            </span>
+
+                                            <button class="path-detail-btn"><i class="fa-solid fa-chevron-left"></i>
+                                                ابدأ </button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- مسار 4: علوم البيانات والذكاء الاصطناعي -->
+                            <div class="path-card">
+                                <div class="path-card-inner">
+                                    <div class="path-card-front">
+                                        <img class="path-img" src="/assets/pexels-kevin-ku-92347-577585.jpg"
+                                            alt="علوم البيانات والذكاء الاصطناعي" loading="lazy">
+                                        <div class="pathpath">
+                                            <p> مسار </p>
+                                        </div>
+                                        <div class="path-info">
+                                            <h4 class="path-title">الذكاء الاصطناعي</h4>
+                                        </div>
+                                    </div>
+                                    <div class="path-card-back">
+                                        <div class="path-info-hover">
+                                            <h4 class="path-title">الذكاء الاصطناعي</h4>
+                                        </div>
+                                        <p class="path-description">استكشف عالم الذكاء الاصطناعي. تعلم التعلم الآلي،
+                                            معالجة اللغات الطبيعية، والرؤية الحاسوبية لحل المشكلات المعقدة.</p>
+                                        <div class="path-details">
+                                            <span class="path-details-inner">
+                                                <span class="path-detail-count"><i class="fas fa-users"></i>
+                                                    +3800</span>
+                                                <span class="path-detail-courses"><i class="fas fa-book"></i> 10
+                                                    دورات</span>
+
+                                                <span class="path-detail-level" data-level="advanced">
+                                                    <span class="level-icon">
+                                                        <div class="bar-container">
+                                                            <div class="bar bar1"></div>
+                                                            <div class="bar bar2"></div>
+                                                            <div class="bar bar3"></div>
+                                                            <div class="bar bar4"></div>
+                                                        </div>
+                                                    </span>
+                                                    متقدم
+                                                </span>
+                                            </span>
+                                            <button class="path-detail-btn"><i class="fa-solid fa-chevron-left"></i>ابدأ
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- مسار 5: أمن المعلومات والشبكات -->
+                            <div class="path-card">
+                                <div class="path-card-inner">
+                                    <div class="path-card-front">
+                                        <img class="path-img" src="/assets/pexels-mati-5952651.jpg"
+                                            alt="أمن المعلومات والشبكات" loading="lazy">
+                                        <div class="pathpath">
+                                            <p> مسار </p>
+                                        </div>
+
+                                        <div class="path-info">
+                                            <h4 class="path-title">أمن المعلومات والشبكات</h4>
+                                        </div>
+                                    </div>
+                                    <div class="path-card-back">
+                                        <div class="path-info-hover">
+                                            <h4 class="path-title">أمن المعلومات والشبكات</h4>
+                                        </div>
+                                        <p class="path-description">تعلم كيفية حماية الأنظمة والشبكات من التهديدات
+                                            السيبرانية. اكتسب مهارات في اختبار الاختراق، تحليل البرمجيات الخبيثة، وإدارة
+                                            أمن المعلومات.</p>
+                                        <div class="path-details">
+
+                                            <span class="path-details-inner">
+                                                <span class="path-detail-count"><i class="fas fa-users"></i> +2900
+                                                </span>
+                                                <span class="path-detail-courses"><i class="fas fa-book"></i> 9
+                                                    دورات</span>
+
+                                                <span class="path-detail-level" data-level="intermediate">
+                                                    <span class="level-icon">
+                                                        <div class="bar-container">
+                                                            <div class="bar bar1"></div>
+                                                            <div class="bar bar2"></div>
+                                                            <div class="bar bar3"></div>
+                                                            <div class="bar bar4"></div>
+                                                        </div>
+                                                    </span>
+                                                    متوسط
+                                                </span>
+                                            </span>
+                                            <button class="path-detail-btn"><i class="fa-solid fa-chevron-left"></i></i>
+                                                ابدأ </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- مسار 6: تطوير الألعاب -->
+                            <div class="path-card">
+                                <div class="path-card-inner">
+                                    <div class="path-card-front">
+                                        <img class="path-img" src="/assets/pexels-thepaintedsquare-3391378.jpg"
+                                            alt="تطوير الألعاب" loading="lazy">
+                                        <div class="pathpath">
+                                            <p> مسار </p>
+                                        </div>
+                                        <div class="path-info">
+                                            <h4 class="path-title">تطوير الألعاب</h4>
+                                        </div>
+                                    </div>
+                                    <div class="path-card-back">
+                                        <div class="path-info-hover">
+                                            <h4 class="path-title">تطوير الألعاب</h4>
+                                        </div>
+                                        <div class="path-description">
+                                            <p class="path-description-title">ادخل عالم صناعة الألعاب المثير. تعلم تصميم
+                                                وبرمجة الألعاب باستخدام محركات مثل Unity و Unreal Engine، وأنشئ تجارب
+                                                تفاعلية مذهلة.</p>
+                                        </div>
+                                        <div class="path-details">
+                                            <span class="path-details-inner">
+
+
+                                                <span class="path-detail-count"><i class="fas fa-users"></i> +3400
+                                                </span>
+                                                <span class="path-detail-courses"><i class="fas fa-book"></i> 8
+                                                    دورات</span>
+
+                                                <span class="path-detail-level" data-level="intermediate">
+                                                    <span class="level-icon">
+                                                        <div class="bar-container">
+                                                            <div class="bar bar1"></div>
+                                                            <div class="bar bar2"></div>
+                                                            <div class="bar bar3"></div>
+                                                            <div class="bar bar4"></div>
+                                                        </div>
+                                                    </span>
+                                                    متوسط
+                                                </span>
+                                            </span>
+                                            <button class="path-detail-btn"><i class="fa-solid fa-chevron-left"></i>
+                                                ابدأ </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- مسار 7:  تطوير تطبيقات الويب الخلفيه -->
+                            <div class="path-card">
+                                <div class="path-card-inner">
+                                    <div class="path-card-front">
+                                        <img class="path-img" src="/assets/front-end-path.jpg"
+                                            alt="تطوير تطبيقات الويب الخلفيه" loading="lazy">
+                                        <div class="pathpath">
+                                            <p> مسار </p>
+                                        </div>
+                                        <div class="path-info">
+                                            <h4 class="path-title">تطوير تطبيقات الويب الخلفيه</h4>
+                                        </div>
+                                    </div>
+                                    <div class="path-card-back">
+                                        <div class="path-info-hover">
+                                            <h4 class="path-title">تطوير تطبيقات الويب الخلفيه</h4>
+                                        </div>
+                                        <p class="path-description">تعلم كيفية إنشاء وتطوير واجهات خلفية قوية لتطبيقات
+                                            الويب. من إدارة قواعد البيانات إلى تطبيقات الويب التفاعلية.</p>
+                                        <div class="path-details">
+                                            <span class="path-details-inner">
+                                                <span class="path-detail-count"><i class="fas fa-users"></i> +3400
+                                                </span>
+                                                <span class="path-detail-courses"><i class="fas fa-book"></i> 8
+                                                    دورات</span>
+
+                                                <span class="path-detail-level" data-level="intermediate">
+                                                    <span class="level-icon">
+                                                        <div class="bar-container">
+                                                            <div class="bar bar1"></div>
+                                                            <div class="bar bar2"></div>
+                                                            <div class="bar bar3"></div>
+                                                            <div class="bar bar4"></div>
+                                                        </div>
+                                                    </span>
+                                                    متوسط
+                                                </span>
+                                            </span>
+                                            <button class="path-detail-btn"><i class="fa-solid fa-chevron-left"></i></i>
+                                                ابدأ </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- مسار 8: التسويق الإلكتروني -->
+                            <div class="path-card">
+                                <div class="path-card-inner">
+                                    <div class="path-card-front">
+                                        <img class="path-img" src="/assets/al2.jpg" alt="التسويق الإلكتروني"
+                                            loading="lazy">
+                                        <div class="pathpath">
+                                            <p> مسار </p>
+                                        </div>
+
+                                        <div class="path-info">
+                                            <h4 class="path-title">التسويق الإلكتروني</h4>
+                                        </div>
+                                    </div>
+                                    <div class="path-card-back">
+                                        <div class="path-info-hover">
+                                            <h4 class="path-title">التسويق الرقمي</h4>
+                                        </div>
+                                        <div class="path-description">
+                                            <p class="path-description-title">اكتشف عالم التسويق الرقمي , </p>
+                                        </div>
+                                        <div class="path-details">
+                                            <span class="path-details-inner">
+                                                <span class="path-detail-count"><i class="fas fa-users"></i> +2800
+                                                </span>
+                                                <span class="path-detail-courses"><i class="fas fa-book"></i> 8
+                                                    دورات</span>
+
+                                                <span class="path-detail-level" data-level="intermediate">
+                                                    <span class="level-icon">
+                                                        <div class="bar-container">
+                                                            <div class="bar bar1"></div>
+                                                            <div class="bar bar2"></div>
+                                                            <div class="bar bar3"></div>
+                                                            <div class="bar bar4"></div>
+                                                        </div>
+                                                    </span>
+                                                    متوسط
+                                                </span>
+                                            </span>
+                                            <button class="path-detail-btn"><i class="fa-solid fa-chevron-left"></i>
+                                                ابدأ </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="view-paths">
+                            <button class="view-all-paths"> الكل</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="tab-content" id="courses">
+                    <h3 class="content-title">دورات متخصصة لتطوير مهاراتك</h3>
+                    <div class="course-grid">
+                        <!-- دورة الذكاء الاصطناعي وتعلم الآلة -->
+                        <div class="course-card">
+                            <div class="course-card-inner">
+                                <div class="course-card-front">
+                                    <img class="course-img" src="/assets/brain-6907898_640.png"
+                                        alt="الذكاء الاصطناعي وتعلم الآلة" loading="lazy">
+                                    <div class="pathpath">
+                                        <p>دورة</p>
+                                    </div>
+                                    <div class="course-info">
+                                        <h4 class="course-title">مقدمة في الذكاء الاصطناعي </h4>
+                                    </div>
+                                </div>
+                                <div class="course-card-back">
+                                    <div class="course-info-hover">
+                                        <h4 class="course-title">مقدمة في الذكاء الاصطناعي</h4>
+                                    </div>
+                                    <div class="course-description">
+                                        <p class="course--description">اكتشف أساسيات الذكاء الاصطناعي وتعلم الآلة. انطلق
+                                            في رحلة لفهم تقنيات المستقبل وتطبيقاتها العملية.</p>
+                                    </div>
+                                    <div class="course-details">
+                                        <span class="course-details-inner">
+                                            <span class="course-detail-count"><i class="fas fa-users"></i> +5000 </span>
+                                            <span class="course-detail-duration"><i class="fas fa-clock"></i> 40
+                                                ساعة</span>
+                                            <span class="path-detail-level" data-level="beginner">
+                                                <span class="level-icon">
+                                                    <div class="bar-container">
+                                                        <div class="bar bar1"></div>
+                                                        <div class="bar bar2"></div>
+                                                        <div class="bar bar3"></div>
+                                                        <div class="bar bar4"></div>
+                                                    </div>
+                                                </span>
+                                                مبتدئ
+                                            </span>
+                                        </span>
+                                        <button class="course-detail-btn">ابدأ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- دورة تصميم واجهات المستخدم -->
+                        <div class="course-card">
+                            <div class="course-card-inner">
+                                <div class="course-card-front">
+                                    <img class="course-img"
+                                        src="/assets/representations-user-experience-interface-design.jpg"
+                                        alt="تصميم واجهات المستخدم" loading="lazy">
+                                    <div class="pathpath">
+                                        <p>دورة</p>
+                                    </div>
+                                    <div class="course-info">
+                                        <h4 class="course-title">تصميم واجهات المستخدم</h4>
+                                    </div>
+                                </div>
+                                <div class="course-card-back">
+                                    <div class="course-info-hover">
+                                        <h4 class="course-title">تصميم واجهات المستخدم: فن الإبداع الرقمي</h4>
+                                    </div>
+                                    <div class="course-description">
+                                        <p>تعلم أساسيات تصميم واجهات المستخدم باستخدام Figma و Adobe XD. اكتسب مهارات
+                                            UX/UI لإنشاء تجارب مستخدم مميزة وجذابة.</p>
+                                    </div>
+                                    <div class="course-details">
+                                        <span class="course-details-inner">
+                                            <span class="course-detail-count"><i class="fas fa-users"></i> +3500 </span>
+                                            <span class="course-detail-duration"><i class="fas fa-clock"></i> 30
+                                                ساعة</span>
+                                            <span class="path-detail-level" data-level="beginner">
+                                                <span class="level-icon">
+                                                    <div class="bar-container">
+                                                        <div class="bar bar1"></div>
+                                                        <div class="bar bar2"></div>
+                                                        <div class="bar bar3"></div>
+                                                        <div class="bar bar4"></div>
+                                                    </div>
+                                                </span>
+                                                مبتدئ
+                                            </span>
+                                        </span>
+                                        <button class="course-detail-btn">ابدأ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- دورة تطوير تطبيقات الويب -->
+                        <div class="course-card">
+                            <div class="course-card-inner">
+                                <div class="course-card-front">
+                                    <img class="course-img" src="/assets/4372937.jpg" alt="تطوير تطبيقات الويب"
+                                        loading="lazy">
+                                    <div class="pathpath">
+                                        <p>دورة</p>
+                                    </div>
+                                    <div class="course-info">
+                                        <h4 class="course-title">تطوير تطبيقات الويب</h4>
+                                    </div>
+                                </div>
+                                <div class="course-card-back">
+                                    <div class="course-info-hover">
+                                        <h4 class="course-title">تطوير تطبيقات الويب: بناء مستقبل الإنترنت</h4>
+                                    </div>
+                                    <div class="course-description">
+                                        <p>اتقن HTML و CSS و JavaScript وتعلم استخدام أطر العمل الحديثة مثل React و
+                                            Node.js. ابنِ تطبيقات ويب متكاملة وقوية.</p>
+                                    </div>
+                                    <div class="course-details">
+                                        <span class="course-details-inner">
+                                            <span class="course-detail-count"><i class="fas fa-users"></i> +4000 </span>
+                                            <span class="course-detail-duration"><i class="fas fa-clock"></i> 50
+                                                ساعة</span>
+                                            <span class="path-detail-level" data-level="beginner">
+                                                <span class="level-icon">
+                                                    <div class="bar-container">
+                                                        <div class="bar bar1"></div>
+                                                        <div class="bar bar2"></div>
+                                                        <div class="bar bar3"></div>
+                                                        <div class="bar bar4"></div>
+                                                    </div>
+                                                </span>
+                                                مبتدئ
+                                            </span>
+                                        </span>
+                                        </span>
+                                        <button class="course-detail-btn">ابدأ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- دورة التسويق الرقمي -->
+                        <div class="course-card">
+                            <div class="course-card-inner">
+                                <div class="course-card-front">
+                                    <img class="course-img" src="/assets/5395108.jpg" alt="التسويق الرقمي"
+                                        loading="lazy">
+                                    <div class="pathpath">
+                                        <p>دورة</p>
+                                    </div>
+                                    <div class="course-info">
+                                        <h4 class="course-title">التسويق الرقمي</h4>
+                                    </div>
+                                </div>
+                                <div class="course-card-back">
+                                    <div class="course-info-hover">
+                                        <h4 class="course-title">التسويق الرقمي: استراتيجيات النجاح في العصر الرقمي</h4>
+                                    </div>
+                                    <div class="course-description">
+                                        <p>تعلم استراتيجيات التسويق عبر وسائل التواصل الاجتماعي، SEO، وإنشاء حملات
+                                            إعلانية فعالة. اكتسب مهارات تحليل البيانات لتحسين أداء حملاتك التسويقية.</p>
+                                    </div>
+                                    <div class="course-details">
+                                        <span class="course-details-inner">
+                                            <span class="course-detail-count"><i class="fas fa-users"></i> +3000 </span>
+                                            <span class="course-detail-duration"><i class="fas fa-clock"></i> 35
+                                                ساعة</span>
+                                            <span class="path-detail-level" data-level="beginner">
+                                                <span class="level-icon">
+                                                    <div class="bar-container">
+                                                        <div class="bar bar1"></div>
+                                                        <div class="bar bar2"></div>
+                                                        <div class="bar bar3"></div>
+                                                        <div class="bar bar4"></div>
+                                                    </div>
+                                                </span>
+                                                مبتدئ
+                                            </span>
+                                        </span>
+                                        </span>
+                                        <button class="course-detail-btn">ابدأ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- دورة إدارة المشاريع -->
+                        <div class="course-card">
+                            <div class="course-card-inner">
+                                <div class="course-card-front">
+                                    <img class="course-img" src="/assets/20945858.jpg" alt="إدارة المشاريع"
+                                        loading="lazy">
+                                    <div class="pathpath">
+                                        <p>دورة</p>
+                                    </div>
+                                    <div class="course-info">
+                                        <h4 class="course-title">إدارة المشاريع</h4>
+                                    </div>
+                                </div>
+                                <div class="course-card-back">
+                                    <div class="course-info-hover">
+                                        <h4 class="course-title">إدارة المشاريع: قيادة النجاح من البداية إلى النهاية
+                                        </h4>
+                                    </div>
+                                    <div class="course-description">
+                                        <p>اكتسب مهارات التخطيط الاستراتيجي وإدارة الموارد. تعلم استخدام أدوات مثل Jira
+                                            و Trello لتحسين الإنتاجية وقيادة المشاريع بنجاح.</p>
+                                    </div>
+                                    <div class="course-details">
+                                        <span class="course-details-inner">
+                                            <span class="course-detail-count"><i class="fas fa-users"></i> +2000 </span>
+                                            <span class="course-detail-duration"><i class="fas fa-clock"></i> 25
+                                                ساعة</span>
+                                            <span class="path-detail-level" data-level="beginner">
+                                                <span class="level-icon">
+                                                    <div class="bar-container">
+                                                        <div class="bar bar1"></div>
+                                                        <div class="bar bar2"></div>
+                                                        <div class="bar bar3"></div>
+                                                        <div class="bar bar4"></div>
+                                                    </div>
+                                                </span>
+                                                مبتدئ
+                                            </span>
+                                        </span>
+                                        </span>
+                                        <button class="course-detail-btn">ابدأ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- دورة تحليل البيانات -->
+                        <div class="course-card">
+                            <div class="course-card-inner">
+                                <div class="course-card-front">
+                                    <img class="course-img"
+                                        src="/assets/representation-user-experience-interface-design-computer.jpg"
+                                        alt="تحليل البيانات" loading="lazy">
+                                    <div class="pathpath">
+                                        <p>دورة</p>
+                                    </div>
+                                    <div class="course-info">
+                                        <h4 class="course-title">تحليل البيانات</h4>
+                                    </div>
+                                </div>
+                                <div class="course-card-back">
+                                    <div class="course-info-hover">
+                                        <h4 class="course-title">تحليل البيانات: استخراج الرؤى وصناعة القرارات</h4>
+                                    </div>
+                                    <div class="course-description">
+                                        <p>تعلم استخدام Python و R لتحليل البيانات الضخمة. اكتسب مهارات في الإحصاء
+                                            والتحليل التنبؤي لاتخاذ قرارات مدروسة بناءً على البيانات.</p>
+                                    </div>
+                                    <div class="course-details">
+                                        <span class="course-details-inner">
+                                            <span class="course-detail-count"><i class="fas fa-users"></i> +2500 </span>
+                                            <span class="course-detail-duration"><i class="fas fa-clock"></i> 40
+                                                ساعة</span>
+                                            <span class="path-detail-level" data-level="intermediate">
+                                                <span class="level-icon">
+                                                    <div class="bar-container">
+                                                        <div class="bar bar1"></div>
+                                                        <div class="bar bar2"></div>
+                                                        <div class="bar bar3"></div>
+                                                        <div class="bar bar4"></div>
+                                                    </div>
+                                                </span>
+                                                متوسط
+                                            </span>
+                                        </span>
+                                        <button class="course-detail-btn">ابدأ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- دورة الأمن السيبراني -->
+                        <div class="course-card">
+                            <div class="course-card-inner">
+                                <div class="course-card-front">
+                                    <img class="course-img" src="/assets/3567818.jpg" alt="الأمن السيبراني"
+                                        loading="lazy">
+                                    <div class="pathpath">
+                                        <p>دورة</p>
+                                    </div>
+                                    <div class="course-info">
+                                        <h4 class="course-title">الأمن السيبراني</h4>
+                                    </div>
+                                </div>
+                                <div class="course-card-back">
+                                    <div class="course-info-hover">
+                                        <h4 class="course-title">الأمن السيبراني: حماية العالم الرقمي</h4>
+                                    </div>
+                                    <div class="course-description">
+                                        <p>تعلم تقنيات التشفير المتقدمة واكتشاف نقاط الضعف. اكتسب مهارات التصدي للهجمات
+                                            الإلكترونية وحماية البيانات الحساسة في العصر الرقمي.</p>
+                                    </div>
+                                    <div class="course-details">
+                                        <span class="course-details-inner">
+                                            <span class="course-detail-count"><i class="fas fa-users"></i> +4000 </span>
+                                            <span class="course-detail-duration"><i class="fas fa-clock"></i> 45
+                                                ساعة</span>
+                                            <span class="path-detail-level" data-level="intermediate">
+                                                <span class="level-icon">
+                                                    <div class="bar-container">
+                                                        <div class="bar bar1"></div>
+                                                        <div class="bar bar2"></div>
+                                                        <div class="bar bar3"></div>
+                                                        <div class="bar bar4"></div>
+                                                    </div>
+                                                </span>
+                                                متوسط
+                                            </span>
+                                        </span>
+                                        </span>
+                                        <button class="course-detail-btn">ابدأ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- دورة تطوير تطبيقات الموبايل -->
+                        <div class="course-card">
+                            <div class="course-card-inner">
+                                <div class="course-card-front">
+                                    <img class="course-img" src="/assets/Wavy_Tech-27_Single-01.jpg"
+                                        alt="تطوير تطبيقات الموبايل" loading="lazy">
+                                    <div class="pathpath">
+                                        <p>دورة</p>
+                                    </div>
+                                    <div class="course-info">
+                                        <h4 class="course-title">تطوير تطبيقات الموبايل</h4>
+                                    </div>
+                                </div>
+                                <div class="course-card-back">
+                                    <div class="course-info-hover">
+                                        <h4 class="course-title">تطوير تطبيقات الموبايل: ابتكار تجارب رقمية متنقلة</h4>
+                                    </div>
+                                    <div class="course-description">
+                                        <p>تعلم استخدام Flutter و React Native لإنشاء تطبيقات عبر منصات متعددة. اكتسب
+                                            مهارات تصميم واجهات المستخدم ودمج الخدمات السحابية في تطبيقات الموبايل.</p>
+                                    </div>
+                                    <div class="course-details">
+                                        <span class="path-details-inner">
+                                            <span class="course-detail-count"><i class="fas fa-users"></i> +3000 </span>
+                                            <span class="course-detail-duration"><i class="fas fa-clock"></i> 40
+                                                ساعة</span>
+                                            <span class="path-detail-level" data-level="intermediate">
+                                                <span class="level-icon">
+                                                    <div class="bar-container">
+                                                        <div class="bar bar1"></div>
+                                                        <div class="bar bar2"></div>
+                                                        <div class="bar bar3"></div>
+                                                        <div class="bar bar4"></div>
+                                                    </div>
+                                                </span>
+                                                متوسط
+                                            </span>
+                                        </span>
+                                        </span>
+                                        <button class="course-detail-btn">ابدأ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-paths">
+                        <button class="view-all-courses">الكل</button>
+                    </div>
+                </div>
+
+
+
+                <div class="tab-content" id="how-to">
+                    <h3 class="content-title">كيفيات تطبيقية لتعزيز مهاراتك التقنية</h3>
+
+                    <div class="how-to-grid">
+
+                        <!-- كيفية إنشاء واجهة مستخدم تفاعلية باستخدام React -->
+                        <div class="how-to-card">
+                            <div class="how-to-card-inner">
+                                <div class="how-to-card-front">
+                                    <img class="course-img" src="/assets/7090544.jpg" alt="واجهة مستخدم React"
+                                        loading="lazy">
+                                    <div class="pathpath">
+                                        <p>كيفية</p>
+                                    </div>
+                                    <div class="how-to-info">
+                                        <h4 class="how-to-title">إنشاء واجهة مستخدم تفاعلية باستخدام React</h4>
+                                    </div>
+                                </div>
+                                <div class="how-to-card-back">
+                                    <div class="how-to-info-hover">
+                                        <h4 class="how-to-title">إنشاء واجهة مستخدم تفاعلية باستخدام React</h4>
+                                    </div>
+                                    <p class="how-to-description">تعلم كيفية بناء مكونات React وإدارة الحالة لإنشاء
+                                        واجهات مستخدم ديناميكية.</p>
+                                    <div class="how-to-details">
+                                        <span class="how-to-details-inner">
+                                            <span class="how-to-detail-duration"><i class="fas fa-clock"></i> 45
+                                                دقيقة</span>
+                                            <span class="path-detail-level" data-level="intermediate">
+                                                <span class="level-icon">
+                                                    <div class="bar-container">
+                                                        <div class="bar bar1"></div>
+                                                        <div class="bar bar2"></div>
+                                                        <div class="bar bar3"></div>
+                                                        <div class="bar bar4"></div>
+                                                    </div>
+                                                </span>
+                                                متوسط
+                                            </span>
+                                        </span>
+                                        <button class="how-to-detail-btn">شاهد الآن</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- كيفية استخدام Git للتحكم في الإصدارات -->
+                        <div class="how-to-card">
+                            <div class="how-to-card-inner">
+                                <div class="how-to-card-front">
+                                    <img class="course-img"
+                                        src="/assets/AdobeStock_402389907_Preview_Editorial_Use_Only.jpeg"
+                                        alt="Git للتحكم في الإصدارات" loading="lazy">
+                                    <div class="pathpath">
+                                        <p>كيفية</p>
+                                    </div>
+                                    <div class="how-to-info">
+                                        <h4 class="how-to-title">استخدام Git للتحكم في الإصدارات</h4>
+                                    </div>
+                                </div>
+                                <div class="how-to-card-back">
+                                    <div class="how-to-info-hover">
+                                        <h4 class="how-to-title">استخدام Git للتحكم في الإصدارات</h4>
+                                    </div>
+                                    <p class="how-to-description">تعلم الأوامر الأساسية في Git وكيفية إدارة المشاريع
+                                        باستخدام التحكم في الإصدارات.</p>
+                                    <div class="how-to-details">
+                                        <span class="how-to-details-inner">
+                                            <span class="how-to-detail-duration"><i class="fas fa-clock"></i> 30
+                                                دقيقة</span>
+                                            <span class="path-detail-level" data-level="beginner">
+                                                <span class="level-icon">
+                                                    <div class="bar-container">
+                                                        <div class="bar bar1"></div>
+                                                        <div class="bar bar2"></div>
+                                                        <div class="bar bar3"></div>
+                                                        <div class="bar bar4"></div>
+                                                    </div>
+                                                </span>
+                                                مبتدئ
+                                            </span>
+                                        </span>
+                                        <button class="how-to-detail-btn">شاهد الآن</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- كيفية إنشاء API باستخدام Node.js و Express -->
+                        <div class="how-to-card">
+                            <div class="how-to-card-inner">
+                                <div class="how-to-card-front">
+                                    <img class="course-img" src="/assets/7063891.jpg" alt="API باستخدام Node.js"
+                                        loading="lazy">
+                                    <div class="pathpath">
+                                        <p>كيفية</p>
+                                    </div>
+                                    <div class="how-to-info">
+                                        <h4 class="how-to-title">إنشاء API باستخدام Node.js و Express</h4>
+                                    </div>
+                                </div>
+                                <div class="how-to-card-back">
+                                    <div class="how-to-info-hover">
+                                        <h4 class="how-to-title">إنشاء API باستخدام Node.js و Express</h4>
+                                    </div>
+                                    <p class="how-to-description">تعلم كيفية بناء API RESTful باستخدام Node.js و
+                                        Express، مع التعامل مع قواعد البيانات.</p>
+                                    <div class="how-to-details">
+                                        <span class="how-to-details-inner">
+                                            <span class="how-to-detail-duration"><i class="fas fa-clock"></i> 50
+                                                دقيقة</span>
+                                            <span class="path-detail-level" data-level="intermediate">
+                                                <span class="level-icon">
+                                                    <div class="bar-container">
+                                                        <div class="bar bar1"></div>
+                                                        <div class="bar bar2"></div>
+                                                        <div class="bar bar3"></div>
+                                                        <div class="bar bar4"></div>
+                                                    </div>
+                                                </span>
+                                                متوسط
+                                            </span>
+                                        </span>
+                                        <button class="how-to-detail-btn">شاهد الآن</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- كيفية بناء تطبيق ويب تفاعلي باستخدام Vue.js -->
+                        <div class="how-to-card">
+                            <div class="how-to-card-inner">
+                                <div class="how-to-card-front">
+                                    <img class="how-to-img" src="/assets/3094293.jpg" alt="تطبيق Vue.js" loading="lazy">
+                                    <div class="pathpath">
+                                        <p>كيفية</p>
+                                    </div>
+                                    <div class="how-to-info">
+                                        <h4 class="how-to-title">بناء تطبيق ويب تفاعلي باستخدام Vue.js</h4>
+                                    </div>
+                                </div>
+                                <div class="how-to-card-back">
+                                    <div class="how-to-info-hover">
+                                        <h4 class="how-to-title">بناء تطبيق ويب تفاعلي باستخدام Vue.js</h4>
+                                    </div>
+                                    <p class="how-to-description">تعلم كيفية إنشاء تطبيق ويب تفاعلي باستخدام إطار العمل
+                                        Vue.js، بما في ذلك إدارة الحالة وتوجيه المكونات.</p>
+                                    <div class="how-to-details">
+                                        <span class="how-to-details-inner">
+                                            <span class="how-to-detail-duration"><i class="fas fa-clock"></i> 55
+                                                دقيقة</span>
+                                            <span class="how-to-detail-level" data-level="intermediate">
+                                                <span class="level-icon">
+                                                    <div class="bar-container">
+                                                        <div class="bar bar1"></div>
+                                                        <div class="bar bar2"></div>
+                                                        <div class="bar bar3"></div>
+                                                        <div class="bar bar4"></div>
+                                                    </div>
+                                                </span>
+                                                متوسط
+                                            </span>
+                                        </span>
+                                        <button class="how-to-detail-btn"><i class="fa-solid fa-chevron-left"></i>شاهد
+                                            الآن</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- كيفية استخدام Docker لنشر تطبيقات الويب -->
+                        <div class="how-to-card">
+                            <div class="how-to-card-inner">
+                                <div class="how-to-card-front">
+                                    <img class="how-to-img" src="/assets/2788522.jpg" alt="نشر باستخدام Docker"
+                                        loading="lazy">
+                                    <div class="pathpath">
+                                        <p>كيفية</p>
+                                    </div>
+                                    <div class="how-to-info">
+                                        <h4 class="how-to-title">استخدام Docker لنشر تطبيقات الويب</h4>
+                                    </div>
+                                </div>
+                                <div class="how-to-card-back">
+                                    <div class="how-to-info-hover">
+                                        <h4 class="how-to-title">استخدام Docker لنشر تطبيقات الويب</h4>
+                                    </div>
+                                    <p class="how-to-description">تعلم كيفية استخدام Docker لتحزيم ونشر تطبيقات الويب
+                                        بسهولة وكفاءة، مع التركيز على أفضل الممارسات.</p>
+                                    <div class="how-to-details">
+                                        <span class="how-to-details-inner">
+                                            <span class="how-to-detail-duration"><i class="fas fa-clock"></i> 40
+                                                دقيقة</span>
+                                            <span class="how-to-detail-level" data-level="advanced">
+                                                <span class="level-icon">
+                                                    <div class="bar-container">
+                                                        <div class="bar bar1"></div>
+                                                        <div class="bar bar2"></div>
+                                                        <div class="bar bar3"></div>
+                                                        <div class="bar bar4"></div>
+                                                    </div>
+                                                </span>
+                                                متقدم
+                                            </span>
+                                        </span>
+                                        <button class="how-to-detail-btn"><i class="fa-solid fa-chevron-left"></i>شاهد
+                                            الآن</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- كيفية تحسين أداء تطبيقات الويب -->
+                        <div class="how-to-card">
+                            <div class="how-to-card-inner">
+                                <div class="how-to-card-front">
+                                    <img class="how-to-img" src="/assets/20945805.jpg" alt="تحسين أداء الويب"
+                                        loading="lazy">
+                                    <div class="pathpath">
+                                        <p>كيفية</p>
+                                    </div>
+                                    <div class="how-to-info">
+                                        <h4 class="how-to-title">تحسين أداء تطبيقات الويب</h4>
+                                    </div>
+                                </div>
+                                <div class="how-to-card-back">
+                                    <div class="how-to-info-hover">
+                                        <h4 class="how-to-title">تحسين أداء تطبيقات الويب</h4>
+                                    </div>
+                                    <p class="how-to-description">اكتشف تقنيات وأدوات لتحسين سرعة تحميل الصفحات وأداء
+                                        JavaScript وتحسين تجربة المستخدم في تطبيقات الويب.</p>
+                                    <div class="how-to-details">
+                                        <span class="how-to-details-inner">
+                                            <span class="how-to-detail-duration"><i class="fas fa-clock"></i> 50
+                                                دقيقة</span>
+                                            <span class="how-to-detail-level" data-level="intermediate">
+                                                <span class="level-icon">
+                                                    <div class="bar-container">
+                                                        <div class="bar bar1"></div>
+                                                        <div class="bar bar2"></div>
+                                                        <div class="bar bar3"></div>
+                                                        <div class="bar bar4"></div>
+                                                    </div>
+                                                </span>
+                                                متوسط
+                                            </span>
+                                        </span>
+                                        <button class="how-to-detail-btn"><i class="fa-solid fa-chevron-left"></i>شاهد
+                                            الآن</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- كيفية استخدام GraphQL لبناء واجهات برمجة تطبيقات مرنة -->
+                        <div class="how-to-card">
+                            <div class="how-to-card-inner">
+                                <div class="how-to-card-front">
+                                    <img class="how-to-img" src="/assets/3657664.jpg" alt="GraphQL API" loading="lazy">
+                                    <div class="pathpath">
+                                        <p>كيفية</p>
+                                    </div>
+                                    <div class="how-to-info">
+                                        <h4 class="how-to-title">استخدام GraphQL لبناء واجهات برمجة تطبيقات مرنة</h4>
+                                    </div>
+                                </div>
+                                <div class="how-to-card-back">
+                                    <div class="how-to-info-hover">
+                                        <h4 class="how-to-title">استخدام GraphQL لبناء واجهات برمجة تطبيقات مرنة</h4>
+                                    </div>
+                                    <p class="how-to-description">تعلم كيفية تصميم وتنفيذ واجهة برمجة تطبيقات GraphQL،
+                                        وكيفية استخدامها لتحسين أداء التطبيق ومرونته.</p>
+                                    <div class="how-to-details">
+                                        <span class="how-to-details-inner">
+                                            <span class="how-to-detail-duration"><i class="fas fa-clock"></i> 45
+                                                دقيقة</span>
+                                            <span class="how-to-detail-level" data-level="intermediate">
+                                                <span class="level-icon">
+                                                    <div class="bar-container">
+                                                        <div class="bar bar1"></div>
+                                                        <div class="bar bar2"></div>
+                                                        <div class="bar bar3"></div>
+                                                        <div class="bar bar4"></div>
+                                                    </div>
+                                                </span>
+                                                متوسط
+                                            </span>
+                                        </span>
+                                        <button class="how-to-detail-btn"><i class="fa-solid fa-chevron-left"></i>شاهد
+                                            الآن</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- كيفية بناء واجهة برمجة تطبيقات RESTful باستخدام Django -->
+                        <div class="how-to-card">
+                            <div class="how-to-card-inner">
+                                <div class="how-to-card-front">
+                                    <img class="how-to-img" src="/assets/9098089.jpg" alt="Django RESTful API"
+                                        loading="lazy">
+                                    <div class="pathpath">
+                                        <p>كيفية</p>
+                                    </div>
+                                    <div class="how-to-info">
+                                        <h4 class="how-to-title">بناء واجهة برمجة تطبيقات RESTful باستخدام Django</h4>
+                                    </div>
+                                </div>
+                                <div class="how-to-card-back">
+                                    <div class="how-to-info-hover">
+                                        <h4 class="how-to-title">بناء واجهة برمجة تطبيقات RESTful باستخدام Django</h4>
+                                    </div>
+                                    <p class="how-to-description">تعلم كيفية تصميم وتنفيذ واجهة برمجة تطبيقات RESTful
+                                        قوية باستخدام إطار العمل Django وDjango REST framework.</p>
+                                    <div class="how-to-details">
+                                        <span class="how-to-details-inner">
+                                            <span class="how-to-detail-duration"><i class="fas fa-clock"></i> 60
+                                                دقيقة</span>
+                                            <span class="how-to-detail-level" data-level="advanced">
+                                                <span class="level-icon">
+                                                    <div class="bar-container">
+                                                        <div class="bar bar1"></div>
+                                                        <div class="bar bar2"></div>
+                                                        <div class="bar bar3"></div>
+                                                        <div class="bar bar4"></div>
+                                                    </div>
+                                                </span>
+                                                متقدم
+                                            </span>
+                                        </span>
+                                        <button class="how-to-detail-btn"><i class="fa-solid fa-chevron-left"></i>شاهد
+                                            الآن</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="view-paths">
+                        <button class="view-all-howto">الكل</button>
+                    </div>
+
+                </div>
+            </section>
+        </section>
+
+
+
+
+        <!-- Features Section -->
+        <section id="features" class="features container">
+            <h2 class="features-section-title">لماذا تختار المدرسة الرقمية المفتوحة؟</h2>
+            <div class="features-grid">
+
+                <div class="feature fade-in">
+                    <i class="fas fa-users"></i>
+                    <h3>مجتمع داعم</h3>
+                    <p>تواصل مع زملاء الدراسة والخبراء لتبادل الأفكار والخبرات والعمل علي مشاريع جماعية حيث يمكنك
+                        التعاون لحل تحديات تقنية حقيقية واكتساب مهارات العمل ضمن فريق.</p>
+                </div>
+                <div class="feature fade-in">
+                    <i class="fas fa-book"></i>
+                    <h3>محتوى متنوع</h3>
+                    <p>استمتع بمحتوى تعليمي متنوع يغطي مختلف تخصصات البرمجة من تطوير الويب ل الذكاء الاصطناعي و
+                        تحليل
+                        البيانات، وغيرها من التخصصات</p>
+                </div>
+                <div class="feature fade-in">
+                    <i class="fas fa-robot"></i>
+                    <h3>تقنيات التعليم المتقدمة</h3>
+                    <p>استمتع بتجربة تعليمية فريدة بفضل استخدام تقنيات حديثة مثل الذكاء الاصطناعي والتعلم التفاعلي،
+                        مما
+                        يضمن لك تعلماً متطوراً ومبتكراً.</p>
+                </div>
+                <div class="feature fade-in">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>مدربون خبراء</h3>
+                    <p>تعلم من محترفين متميزين معتمدين في مجالاتهم، واستفد من خبراتهم العميقة وتوجهتهم لتعزيز
+                        مهاراتك
+                    </p>
+                </div>
+                <div class="feature fade-in">
+                    <i class="fas fa-globe"></i>
+                    <h3>تعلم عن بعد</h3>
+                    <p>استفد من التعلم عن بعد في أي وقت ومن أي مكان.</p>
+                </div>
+
+                <div class="feature fade-in" id="certificates-feature">
+                    <i class="fas fa-certificate"></i>
+                    <h3>شهادات معتمدة</h3>
+                    <p>احصل على شهادات معترف بها في مجال التكنولوجيا تفتح لك ابواب الفرص المهنيه في مجال التكنولوجيا
+                        محلياً وعالمياً</p>
+                </div>
+                <div class="feature fade-in">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>تعلم عملي وتطبيقي</h3>
+                    <p>استفد من مشاريع واقعية ومختبرات تفاعلية لتعزيز مهاراتك وتطبيق المفاهيم التقنية بشكل مباشر.
+                    </p>
+                </div>
+
+
+                <div class="feature fade-in">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>تقييم دوري للأداء</h3>
+                    <p>قيّم تقدمك بشكل مستمر مع تقارير أداء دورية، وحدد نقاط قوتك ونقاط التحسين لضمان تطور مهاراتك
+                        بشكل
+                        فعال وملحوظ.</p>
+                </div>
+
+                <div class="feature fade-in">
+                    <i class="fas fa-layer-group"></i>
+                    <h3>منهجية تعليمية متكاملة</h3>
+                    <p>استفد من منهجية متكاملة تضمن لك التعلم التدريجي والفعّال مع نتائج ملحوظة.</p>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class="testimonials">
+            <h2 class="testimonials-section-title">ماذا يقول <span class="highlight">طلابنا</span></h2>
+
+
+            <div class="testimonial-slider">
+                <!-- عنصر شهادة فردي -->
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <blockquote>
+                            لا بسم الله ماشاء الله الشرح كويس جدا و المحتوى دسم و شغل محترم والله و تاسكات كل سيشن و
+                            الدنيا لذيذه جدا يعني ماشاء الله
+                        </blockquote>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/user2.webp" alt="أحمد العلي" class="testimonial-image">
+                        <div class="author-info">
+                            <span class="author-name">أحمد العلي</span>
+                            <small class="author-title">مطور برمجيات متقدم</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- عنصر شهادة آخر -->
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <blockquote>
+                            تجربة تعليمية فريدة! المحتوى عملي ومواكب لأحدث التقنيات، والمدربون خبراء حقيقيون في
+                            مجالاتهم.
+                        </blockquote>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/user8-512.webp" alt="سارة محمد" class="testimonial-image">
+                        <div class="author-info">
+                            <span class="author-name">سارة محمد</span>
+                            <small class="author-title">باحثة في علوم الحاسوب</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- عنصر شهادة إضافي جديد -->
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <blockquote>
+                            الدورة رائعة والمدربين متعاونين جدًا، فهمت العديد من المفاهيم التي كنت أجدها صعبة سابقًا،
+                            شكرًا للفريق!
+                        </blockquote>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/user2.webp" alt="علي حسن" class="testimonial-image">
+                        <div class="author-info">
+                            <span class="author-name">علي حسن</span>
+                            <small class="author-title">مهندس شبكات</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="slide-indicators">
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+            </div>
+        </section>
+
+
+        <!-- FAQs Section -->
+        <section class="faq">
+            <h2 class="faq-section-title">الأسئلة الشائعة</h2>
+            <div class="faq-items">
+                <div class="faq-item">
+                    <h3 class="faq-question">كيف يمكنني التسجيل في الدورات؟</h3>
+                    <p class="faq-answer">يمكنك التسجيل عبر الضغط على زر "سجل الآن" الموجود في صفحة كل دورة وملء
+                        النموذج المطلوب.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">هل توفرون شهادات بعد انتهاء الدورات؟</h3>
+                    <p class="faq-answer">نعم، جميع الدورات المعتمدة تأتي مع شهادات معترف بها تمنح بعد إكمال
+                        الدورة بنجاح.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">هل يمكنني تعلم الدورات في أي وقت؟</h3>
+                    <p class="faq-answer">نعم، يمكنك الوصول إلى المحتوى في أي وقت ومن أي مكان، وتتيح لك الدورات
+                        المرنة التعلم وفقًا لجدولك الخاص.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">هل يمكنني الحصول على دعم أثناء الدورة؟</h3>
+                    <p class="faq-answer">نعم، يتوفر دعم فني وتوجيه من المدربين طوال مدة الدورة.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">ما هي طرق الدفع المتاحة؟</h3>
+                    <p class="faq-answer">نقبل عدة طرق دفع بما في ذلك بطاقات الائتمان والتحويل البنكي.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">كيف يمكنني الحصول على المساعدة التقنية؟</h3>
+                    <p class="faq-answer">يمكنك التواصل مع فريق الدعم التقني عبر البريد الإلكتروني أو من خلال
+                        نموذج الاتصال في موقعنا.</p>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- Call to Action Section -->
+        <section class="cta-section">
+            <img class="cta-img-top" src="/assets/footer-lines.svg" alt="تطوير تطبيقات الويب">
+            <div class="cta-container">
+                <h2>ابدأ رحلتك التعليمية اليوم</h2>
+                <p>انضم إلى الآلاف من المتعلمين وطور مهاراتك في مجال التكنولوجيا</p>
+                <a href="#" class="cta-button">ابدأ الآن</a>
+
+            </div>
+            <img class="cta-img-bottom" src="/assets/footer-lines.svg" alt="تطوير تطبيقات الويب">
+        </section>
+
+
+    </main>
+    <footer>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 المدرسة الرقمية المفتوحة. جميع الحقوق محفوظة.</p>
+            </div>
+    </footer>
+    
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+
+</body>
+
+</html>
